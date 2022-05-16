@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a38e3ff5-747c-4bef-97e4-ede2e021ac1c",
+		"name": "Device Manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Device",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceId",
+							"value": "6U-P-65-3396",
+							"description": "String",
+							"type": "text"
+						},
+						{
+							"key": "activationCode",
+							"value": "XTfdtbw8A5qe7aKW",
+							"description": "String",
+							"type": "text"
+						},
+						{
+							"key": "owner_id",
+							"value": "3",
+							"description": "integer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/device/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"device",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/device/info/R8-L-30-5946",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"device",
+						"info",
+						"R8-L-30-5946"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Update Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "JaWKMWgxpfJ3aJwV",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceTraining",
+							"value": "44",
+							"description": "Integer | Min : 1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/leasing/update/6U-P-65-3396",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"leasing",
+						"update",
+						"6U-P-65-3396"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
